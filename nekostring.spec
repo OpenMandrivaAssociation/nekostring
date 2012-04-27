@@ -11,7 +11,7 @@ Summary:    70's String Ensemble DSSI plugin
 Version:    0.1.1
 
 %if %branch
-Release:        0.%git_snapshot.1
+Release:        0.%git_snapshot.2
 %else
 Release:        1
 %endif
@@ -40,15 +40,14 @@ autoreconf -i
 
 %configure --with-dssi-dir=%{buildroot}%{_libdir}/dssi --disable-static
 
-%make
+%make bindir=%{_libdir}/dssi/%name
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall bindir=%{buildroot}%{_libdir}/dssi/%name
 
 %files
 %defattr(-,root,root)
 %doc COPYING README
-%_bindir/*
 %_libdir/dssi/*
 
