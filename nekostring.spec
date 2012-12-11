@@ -51,3 +51,14 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING README
 %_libdir/dssi/*
 
+
+
+%changelog
+* Fri Apr 27 2012 Frank Kober <emuse@mandriva.org> 0.1.1-0.gitc677b77.2
++ Revision: 794050
+- fixed GUI binary installation path
+
+* Fri Apr 27 2012 Frank Kober <emuse@mandriva.org> 0.1.1-0.gitc677b77.1
++ Revision: 793852
+- imported package nekostring
+
