@@ -13,7 +13,7 @@ Version:    0.1.1
 %if %branch
 Release:        0.%git_snapshot.2
 %else
-Release:        1
+Release:        2
 %endif
 
 Source:     https://github.com/gordonjcp/nekostring/gordonjcp-nekostring-c677b77.tar.gz
